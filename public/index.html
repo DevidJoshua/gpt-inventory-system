@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory Manager</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Inventory Manager</h1>
+      <p>Manage stock from web and consume the same API from mobile apps.</p>
+
+      <section class="card">
+        <h2>Add Item</h2>
+        <form id="item-form">
+          <input name="sku" placeholder="SKU" required />
+          <input name="name" placeholder="Name" required />
+          <input name="description" placeholder="Description" />
+          <input name="quantity" type="number" min="0" placeholder="Quantity" value="0" />
+          <input name="unit_price" type="number" min="0" step="0.01" placeholder="Unit Price" value="0" />
+          <button type="submit">Add Item</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Items</h2>
+        <button id="refresh-btn">Refresh</button>
+        <div id="items"></div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
